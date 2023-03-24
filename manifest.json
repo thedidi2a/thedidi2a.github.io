@@ -6,9 +6,10 @@
  "short_name" : "ACPP",
  "icons" :   [
    {
-     "src" : "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.jpg?raw=true",
+     "src" : "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.png?raw=true",
      "sizes" : "512x512",
-     "type" : "image\/jpg"
+     "type": "image/png";
+     "purpose": "any"
    }
  ],
  "theme_color" : "#1a1a1a",
