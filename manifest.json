@@ -7,7 +7,7 @@
  "icons" :   [
    {
      "src" : "https://raw.githubusercontent.com/thedidi2a/thedidi2a.github.io/main/video/logo.webp",
-     "sizes" : "192x192",
+     "sizes" : "512x512",
      "type" : "image\/webp"
    }
  ],
