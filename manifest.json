@@ -6,7 +6,7 @@
  "short_name" : "ACPP",
  "icons" :   [
    {
-     "src" : "https://raw.githubusercontent.com/thedidi2a/thedidi2a.github.io/main/video/logo.webp",
+     "src" : "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.jpg?raw=true",
      "sizes" : "512x512",
      "type" : "image\/webp"
    }
