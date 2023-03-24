@@ -481,5 +481,17 @@ https://templatemo.com/tm-554-ocean-vibes
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>    
     <script src="js/templatemo-script.js"></script>
+<script>
+	function registerServiceWorker() {
+  // enregistre le script sw avec les navigateurs qui le gèrent
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js', { scope: '/' }).then(() => {
+      console.log('Service Worker enregistré correctement.');
+    }).catch(error => {
+      console.log('Erreur lors de l''enregistrement du Service Worker : ', error);
+    });
+  }
+}
+</script>
 </body>
 </html>
