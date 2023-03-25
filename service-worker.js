@@ -1,6 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
+  '/index.html',
   '/styles/main.css',
   '/script/main.js',
   'https://mathias2a.github.io'
