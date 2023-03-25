@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css"> 
     <link rel="stylesheet" href="css/templatemo-ocean-vibes.css"> 
     <link rel="manifest" href="/manifest.json">
+	
 	<!--
     
 TemplateMo 554 Ocean Vibes
@@ -496,5 +497,18 @@ https://templatemo.com/tm-554-ocean-vibes
   }
 }
 </script>
+<script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            // Service worker registered successfully
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // Service worker registration failed
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
 </body>
 </html>
