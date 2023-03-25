@@ -1,0 +1,22 @@
+{
+    "short_name": "ACPP",
+    "name": "ACP-Project : Dermatopathology",
+    "icons": [
+      {
+        "src": "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.png?raw=true",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.png?raw=true",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000",
+    "description": "Manifest Test"
+}
