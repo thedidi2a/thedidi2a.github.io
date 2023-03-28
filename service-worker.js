@@ -4,7 +4,7 @@ var urlsToCache = [
   '/index.html',
   '/styles/main.css',
   '/script/main.js',
-  'https://mathias2a.github.io'
+  "https://mathias2a.github.io"
   'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'
   
 ];
