@@ -5,12 +5,12 @@
       {
         "src": "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.png?raw=true",
         "type": "image/png",
-        "sizes": "autox192"
+        "sizes": "192xauto"
       },
       {
         "src": "https://github.com/thedidi2a/thedidi2a.github.io/blob/main/video/logo.png?raw=true",
         "type": "image/png",
-        "sizes": "autox512"
+        "sizes": "512xauto"
       }
     ],
     "start_url": "/",
