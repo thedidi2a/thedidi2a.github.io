@@ -79,7 +79,48 @@
         </div>
 
         <div id="gallery" class="popup mfp-with-anim mfp-hide tm-bg-gray">
-<iframe style="width: 100%; height: 600px; overflow: show;" src="https://thedidi2a13.github.io/" width="100" height="100" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
+<section id="Recherche">
+  <h2>Recherche de diagnostic</h2>
+  <!-- Ajouter le contenu spécifique ici -->
+	
+	<input type="text" id="myInput" onkeyup="filterList()" placeholder="Rechercher...">
+	<ul id="myList">
+		<li><a href="https://mathias2a.github.io/#card29"target="_blank" rel="noopener">Amylose cutan&eacute;e maculeuse et pigment&eacute;e</a></li>
+      <li><a href="https://mathias2a.github.io/#card179"target="_blank" rel="noopener">Botriomycose</a></li>
+		<li><a href="https://mathias2a.github.io/#card178"target="_blank" rel="noopener">Blastomycose-like pyoderma</a></li>
+		<li>Élément 3</li> 
+		<li>Élément 4</li>
+		<li>Élément 5</li>
+		<li>Élément 6</li>
+		<li>Élément 7</li>
+		<li>Élément 8</li>
+	</ul>
+
+  <!-- Ajouter le script spécifique ici -->
+<script>
+		function filterList() {
+			// Récupérer la valeur de la recherche
+			var filterValue = document.getElementById("myInput").value.toUpperCase();
+			// Récupérer la liste à filtrer
+			var list = document.getElementById("myList");
+			// Récupérer tous les éléments de la liste
+			var items = list.getElementsByTagName("li");
+			// Parcourir chaque élément de la liste
+			for (var i = 0; i < items.length; i++) {
+				// Récupérer le texte de l'élément
+				var text = items[i].textContent || items[i].innerText;
+				// Vérifier si le texte contient la valeur de la recherche
+				if (text.toUpperCase().indexOf(filterValue) > -1) {
+					// Afficher l'élément
+					items[i].style.display = "";
+				} else {
+					// Masquer l'élément
+					items[i].style.display = "none";
+				}
+			}
+		}
+</script>
+</section>
 
         </div>
 
