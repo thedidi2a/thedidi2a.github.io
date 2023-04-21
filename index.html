@@ -72,18 +72,26 @@ https://templatemo.com/tm-554-ocean-vibes
         </nav>
 
         <!-- Popup itself -->
-        <div id="intro" class="popup mfp-with-anim mfp-hide tm-bg-gray">
-		<a href="#" class="tm-close-popup">
-                fermer
-                <i class="fas fa-times"></i>
-            </a>
-            <div class="tm-row tm-intro-row">
-  <iframe style="width: 100%; height: 600px; overflow: show;" src="siteprincipal.html" width="100" height="100" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
+	
+	
+<div id="intro" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+  <a href="#" class="tm-close-popup">
+    fermer
+    <i class="fas fa-times"></i>
+  </a>
+  <button onclick="reloadIframe()">Réinitialiser</button>
+  <div class="tm-row tm-intro-row">
+    <iframe id="siteFrame" style="width: 100%; height: 600px; overflow: show;" src="siteprincipal.html" width="100" height="100" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
+  </div>                
+</div> 
 
-                
-		</div>                
-            </div> 
-        </div>
+<script>
+  function reloadIframe() {
+    var iframe = document.getElementById("siteFrame");
+    iframe.src = iframe.src;
+  }
+</script>
+
 
         <div id="gallery" class="popup mfp-with-anim mfp-hide tm-bg-gray">
 <section id="Recherche">
