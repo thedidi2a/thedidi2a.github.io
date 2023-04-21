@@ -79,23 +79,10 @@ https://templatemo.com/tm-554-ocean-vibes
     fermer
     <i class="fas fa-times"></i>
   </a>
-  <button onclick="resetIframe()">Réinitialiser</button>
-  <button onclick="previousPage()">Précédent</button>
   <div class="tm-row tm-intro-row">
     <iframe id="site-iframe" style="width: 100%; height: 600px; overflow: show;" src="siteprincipal.html" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
   </div>                
 </div>
-<script type="text/javascript">
-  function resetFrame() {
-    var iframe = document.getElementById('myframe');
-    iframe.src = iframe.src;
-  }
-
-  function previousPage() {
-    var iframe = document.getElementById('myframe');
-    iframe.contentWindow.history.back();
-  }
-</script>
 
 
 
