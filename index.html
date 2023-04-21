@@ -79,7 +79,17 @@ https://templatemo.com/tm-554-ocean-vibes
                 <i class="fas fa-times"></i>
             </a>
             <div class="tm-row tm-intro-row">
-                <iframe style="width: 100%; height: 600px; overflow: show;" src="siteprincipal.html" width="100" height="100" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
+		        <iframe id="mon-iframe" style="width: 100%; height: 600px; overflow: show;" src="siteprincipal.html" width="100" height="100" scrolling="yes" sandbox="allow-same-origin allow-scripts">Iframes not supported</iframe>
+    <button type="button" onclick="rechargerIframe()">Recharger la page</button>
+
+    <script>
+      function rechargerIframe() {
+        var iframe = document.getElementById('mon-iframe');
+        var url = new URL(iframe.src);
+        iframe.src = url.origin;
+      }
+    </script>
+                
 		</div>                
             </div> 
         </div>
