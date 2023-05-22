@@ -8,6 +8,26 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">    
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 
+ <script>
+  $(document).ready(function() {
+    $('a').on('click', function(event) {
+      var href = $(this).attr('href');
+      var cardPattern = /#card(\d+)/; // Expression régulière pour extraire le numéro de carte
+      var match = href.match(cardPattern);
+      
+      if (match) {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        var cardNumber = parseInt(match[1]); // Convertit le numéro de carte en entier
+        
+        if (cardNumber >= 1 && cardNumber <= 500) {
+          var target = '#card' + cardNumber;
+          $(target).attr('loading', 'lazy'); // Ajoute l'attribut loading="lazy" à la cible
+        }
+      }
+    });
+  });
+  </script>
+
 </head> 
 
 <body> 
@@ -20373,7 +20393,7 @@ D'autres manifestations ont été rapportées : eruptions maculopapuleuses, lés
 <p></p>
 <ul data-role='listview' data-inset='true' >
 <li><a href='#card30' >IgM granulaire, IgG, IgA, C3</a></li>
-<li><a href='#card378' >IgA linéaires</a></li>
+<li><a href='#card32' >IgA linéaires</a></li>
 <li><a href='#card479' >IgG linéaires, C3</a></li>
 </ul>
 </div><!-- /content -->
@@ -20464,6 +20484,7 @@ D'autres manifestations ont été rapportées : eruptions maculopapuleuses, lés
 <script>document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".onglets li a");e.forEach((e=>{e.addEventListener("click",(t=>{t.preventDefault();const n=e.getAttribute("href"),l=document.querySelector(n),o=document.querySelector(".tab-content.active"),c=document.querySelector(".onglets li.active");o&&o.classList.remove("active"),c&&c.classList.remove("active"),l.classList.add("active"),e.parentNode.classList.add("active")}))}))});</script>	<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
 <style type="text/css">.breakAll{word-break:break-all}.onglets{display:flex;flex-wrap:wrap;border-bottom:1px solid #ddd;margin-bottom:0;padding-left:0;list-style:none}.onglets li{margin-bottom:-1px}.onglets li a{display:block;padding:.5rem 1rem;border:1px solid #ddd;border-bottom:none;background-color:#f8f8f8;text-decoration:none;color:#333;font-weight:600;font-family:"San Francisco",Arial,sans-serif}.onglets li a:hover,.onglets li a:focus{background-color:#ddd}.onglets .active a{border-color:#ddd;background-color:#021f51;color:#fff}.tab-content{padding:1rem;border:1px solid #ddd;border-top:none;font-family:"San Francisco",Arial,sans-serif;display:none}.tab-content.active{display:block}</style>
 </body>
 </html>
