@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>	
+ <title>Recherche </title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show Bootstrap Tab Using jQuery</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+		function filterList() {
+			// Récupérer la valeur de la recherche
+			var filterValue = document.getElementById("myInput").value.toUpperCase();
+			// Récupérer la liste à filtrer
+			var list = document.getElementById("myList");
+			// Récupérer tous les éléments de la liste
+			var items = list.getElementsByTagName("li");
+			// Parcourir chaque élément de la liste
+			for (var i = 0; i < items.length; i++) {
+				// Récupérer le texte de l'élément
+				var text = items[i].textContent || items[i].innerText;
+				// Vérifier si le texte contient la valeur de la recherche
+				if (text.toUpperCase().indexOf(filterValue) > -1) {
+					// Afficher l'élément
+					items[i].style.display = "";
+				} else {
+					// Masquer l'élément
+					items[i].style.display = "none";
+				}
+			}
+		}
+</script>
+
+<body>
+	<input type="text" id="myInput" onkeyup="filterList()" placeholder="Rechercher une source...">
+  
+  
+  
+	<ul id="myList">
+      <p><h2>Sources pour la r&eacute;alisations de l'algorithme :</h2></p>
+<ul>
+<li class="citation-text">Smith EH, Chan MP. Inflammatory Dermatopathology for General Surgical Pathologists. Clin Lab Med. 2017 Sep;37(3):673-696. doi: 10.1016/j.cll.2017.05.008. PMID: 28802506.</li>
+<li class="citation-text">
+<div class="citation-text">H&uuml;gel H. Histologische Diagnostik entz&uuml;ndlicher Hauterkrankungen. Verwendung eines einfachen Algorithmus und moderner Methoden [Histological diagnosis of inflammatory skin diseases. Use of a simple algorithm and modern diagnostic methods]. Pathologe. 2002 Jan;23(1):20-37. German. doi: 10.1007/s00292-001-0511-3. PMID: 11974500.</div>
+</li>
+<li>Kanti V, R&ouml;wert-Huber J, Vogt A, Blume-Peytavi U. Cicatricial alopecia. JDDG: Journal der Deutschen Dermatologischen Gesellschaft. 2018;16(4):435‑61.</li>
+</ul>
+<div class="citation-text"></div>
+  <p></p>
+<br/>
+  <p><h2>Sources d'informations globales pour l'ensemble des diagnostics :</h2></p>
+<ul>
+<li>
+<div id="container" class="style-scope ytd-channel-name">
+<div id="text-container" class="style-scope ytd-channel-name"><yt-formatted-string id="text" link-inherit-color="" title="" class="style-scope ytd-channel-name">Jerad Gardner, MD </yt-formatted-string>[Cha&icirc;ne YouTube]. Pennsylvania (US): JMGardnerMD;<span dir="auto" class="style-scope yt-formatted-string">2012 </span>[cit&eacute; le 27 mai 2023]. Disponible : https://www.youtube.com/@JMGardnerMD/featured</div>
+</div>
+</li>
+<li>
+<div id="container" class="style-scope ytd-channel-name">
+<div id="text-container" class="style-scope ytd-channel-name">Josef Feit, Hana Jedličkov&aacute;, G&uuml;nter Burg, Luděk Matyska, Spasoje Radovanovic et al.. Atlas of dermatopathology [En ligne]. R&eacute;publique tch&egrave;que :&copy; 2000, 2015 Josef Feit; 2016 [modifi&eacute; d&eacute;cembre 2020; cit&eacute; le 27 mai 2023]. Disponible sur&nbsp;:&nbsp;https://atlases.muni.cz/atlases/kuze/atl_en/sect_main.html </div>
+</div>
+</li>
+<li><span class="text-color-red">Robert E. LeBlanc, M.D.</span> Pathology outlines - <span class="f18b">Skin nontumor</span> <span class="text-color-red">[En ligne].</span> Bingham Farms (US)<span class="text-color-red">:</span> 2002-2023, PathologyOutlines.com, Inc. <span class="text-color-red">; </span>2002 <span class="text-color-red">[modifi&eacute; le 8 mai 2023</span> <span class="text-color-red">; cit&eacute;&nbsp;le </span>27 mai 2023<span class="text-color-red">]</span><span class="text-color-red">. Disponible sur : https://www.pathologyoutlines.com/skinnontumor.html</span><span class="text-color-red"></span><strong style="font-family: inherit; font-size: inherit; text-indent: -1.5rem;"><span class="text-color-red"><br /></span></strong></li>
+<li>Prof (Dr) Haradhan Roy MD (AIIMS), Dr Sampurna Roy&nbsp; MD<span class="text-color-red">.</span> histopathology-india.net <span class="text-color-red">[En ligne].</span> Calcutta (IND) <span class="text-color-red">; </span>2002 <span class="text-color-red">[modifi&eacute;&nbsp;le </span>09 f&eacute;vrier 2023<span class="text-color-red">; cit&eacute;&nbsp;le </span>27 mai 2023<span class="text-color-red">]</span><span class="text-color-red">. Disponible sur&nbsp;:&nbsp;</span><span class="text-color-red">http://www.histopathology-india.net/dermpath.htm <br /></span></li>
+
+<li>
+<div class="wrapper-note">Dubertret L. et coll., <em class="marquage italique">Th&eacute;rapeutique dermatologique [En Ligne].</em> Paris (FR) : Agence Fran&ccedil;aise Pour La Creation Num&eacute;rique. 2001. [modifi&eacute; en mai 2023, cit&eacute; le 27/05/2023]. Disponible sur : https://www.therapeutique-dermatologique.org/spip.php?rubrique1&amp;lang=fr</div>
+</li>
+</ul>
+<p></p>
+  <br/>
+
+  <p><h2>Sources sp&eacute;cifiques &agrave; chaque pathologie :</h2></p>
+<ol>
+<li>FERRI C. Orphanet: Cryoglobulin&eacute;mie simple [Internet]. [cit&eacute; 13 mai 2023]. Disponible sur: https://www.orpha.net/consor/cgi-bin/OC_Exp.php?Expert=91139&amp;lng=FR</li>
+<li>Elsevier. Vergetures [Internet]. Elsevier Connect. [cit&eacute; 21 mai 2023]. Disponible sur: https://www.elsevier.com/fr-fr/connect/dermatologie/vergetures</li>
+<li>Masson E. Cellulite diss&eacute;quante du scalp : &agrave; propos de 51 patients [Internet]. EM-Consulte. [cit&eacute; 18 avr 2023]. Disponible sur: https://www.em-consulte.com/article/939879/cellulite-dissequante-du-scalp�-a-propos-de-51�pat</li>
+<li>Price A, Tavazoie M, Meehan SA, Leger M. Id Reaction Associated With Red Tattoo Ink.</li>
+<li>RESERVES IUTD. Orphanet: Malakoplakie [Internet]. [cit&eacute; 24 avr 2023]. Disponible sur: https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=FR&amp;Expert=556</li>
+<li>Tesini BL. Variole - Maladies infectieuses [Internet]. &Eacute;dition professionnelle du Manuel MSD. [cit&eacute; 14 mai 2023]. Disponible sur: https://www.msdmanuals.com/fr/professional/maladies-infectieuses/virus-de-la-variole/variole</li>
+<li>Venugopal. Primary localized cutaneous amyloidosis &ndash; A clinicopathological study [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;type=3</li>
+<li></li>
+<li>Cutaneous Involvement in Waldenstr&ouml;m&rsquo;s Macroglobulinaemia [Internet]. [cit&eacute; 13 mai 2023]. Disponible sur: http://www.medicaljournals.se/acta/content/html/10.2340/00015555-3535</li>
+<li>Dermatitis herpetiformis [Internet]. [cit&eacute; 9 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumordermatitisherpetiformis.html</li>
+<li>Dermato infl-RIUF-Path: Dermatose &agrave; IgA lin&eacute;aire (DIGAL) [Internet]. sides. [cit&eacute; 11 mars 2023]. Disponible sur: https://sides.uness.fr/elearning</li>
+<li>Dermatologie esth&eacute;tique | Livre | 9782294745898 [Internet]. Elsevier Masson SAS. [cit&eacute; 21 mai 2023]. Disponible sur: https://www.elsevier-masson.fr/dermatologie-esthetique-9782294745898.html</li>
+<li>Fungi-Candida [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumorfungicandida.html</li>
+<li>Histopathologie cutanee non tumorale - Janine Wechsler - Librairie Eyrolles [Internet]. [cit&eacute; 29 mars 2023]. Disponible sur: https://www.eyrolles.com/Sciences/Livre/histopathologie-cutanee-non-tumorale-9782840238263/</li>
+<li>Linear IgA disease [Internet]. [cit&eacute; 11 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumorlineariga.html</li>
+<li>Mycoses profondes Actualit&eacute;s 2022.</li>
+<li>Pathology of Dermatophytosis - Dr Sampurna Roy MD [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: http://www.histopathology-india.net/DePhy.htm</li>
+<li>Pathology of Orf (Ecthyma Contagiosum) - Dr Sampurna Roy MD [Internet]. [cit&eacute; 14 mai 2023]. Disponible sur: http://www.histopathology-india.net/orf.htm</li>
+<li>Purpura fulminans de l&rsquo;adulte [Internet]. [cit&eacute; 14 mai 2023]. Disponible sur: https://www.larevuedupraticien.fr/article/purpura-fulminans-de-ladulte</li>
+<li>SIDES-UNESS. Nicolas Macagno. Pathologie des tissus mous (hors visc&egrave;re, peau et p&eacute;diatrie). Item 09.556 : Fasciite nodulaire, Myosite ossifiante, Fibromatoses superficielles et profondes (desmo&iuml;des).[En ligne]. 21/05/2023. https://sides.uness.fr/elearning/mod/resource/view.php?id=136828.</li>
+<li>Malbos S, Guilhou JJ, Meynadier J, Barneon G, Baldet P. Le xanthogranulome de l&rsquo;adulte. Dermatology. 1979;158(5):334‑42.</li>
+<li>Bonifazi E, Garofalo L, Lospalluti M, Scardigno A, Coviello C, Meneghini CL. Granuloma gluteale infantum with atrophic scars: clinical and histological observations in eleven cases. Clin Exp Dermatol. janv 1981;6(1):23‑9.</li>
+<li>Ruzicka T, Schmoeckel C, Ring J, Linke RP, Braun-Falco O. Bullous amyloidosis. Br J Dermatol. juill 1985;113(1):85‑95.</li>
+<li>Cohen SJ, Pittelkow MR, Daniel Su WP. Cutaneous manifestations of cryoglobulinemia: Clinical and histopathologic study of seventy-two patients. Journal of the American Academy of Dermatology. juill 1991;25(1):21‑7.</li>
+<li>Lowe L, Kornfeld B, Clayman J, Golitz LE. Rheumatoid neutrophilic dermatitis. J Cutan Pathol. f&eacute;vr 1992;19(1):48‑53.</li>
+<li>Lowe L, Kornfeld B, Clayman J, Golitz LE. Rheumatoid neutrophilic dermatitis. J Cutan Pathol. f&eacute;vr 1992;19(1):48‑53.</li>
+<li>Chan YM, Yu QC, Fine JD, Fuchs E. The genetic basis of Weber-Cockayne epidermolysis bullosa simplex. Proceedings of the National Academy of Sciences of the United States of America. 8 ao&ucirc;t 1993;90(15):7414.</li>
+<li>Magro CM, Crowson AN, Peeling R. Vasculitis as the basis of cutaneous lesions in Reiter&rsquo;s disease. Human Pathology. juin 1995;26(6):633‑8.</li>
+<li>Chen K, Toyohara A, Suzuki A, Miyakawa S. Clinical and histopathological spectrum of cutaneous vasculitis in rheumatoid arthritis. British Journal of Dermatology. 1 nov 2002;147(5):905‑13.</li>
+<li>Chen K, Toyohara A, Suzuki A, Miyakawa S. Clinical and histopathological spectrum of cutaneous vasculitis in rheumatoid arthritis. British Journal of Dermatology. 1 nov 2002;147(5):905‑13.</li>
+<li>Chen K, Toyohara A, Suzuki A, Miyakawa S. Clinical and histopathological spectrum of cutaneous vasculitis in rheumatoid arthritis. British Journal of Dermatology. 1 nov 2002;147(5):905‑13.</li>
+<li>Pujol RM, Wang CYE, el-Azhary RA, Su WPD, Gibson LE, Schroeter AL. Necrolytic migratory erythema: clinicopathologic study of 13 cases. Int J Dermatol. janv 2004;43(1):12‑8.</li>
+<li>Pessel S, Adamski H, Chevrant-Breton J. [Erythropoietic protoporphyria]. Ann Dermatol Venereol. f&eacute;vr 2004;131(2):213‑6.</li>
+<li>Molinos S, Feal C, G&aacute;ndara A, Morla J, De la Torre C, Ros&oacute;n E. Cholesterol emboli syndrome: significance of the lesional skin biopsies. Acta Derm Venereol. 2005;85(6):527‑8.</li>
+<li>Morgan MB, Stevens GL, Switlyk S. Benign Lichenoid Keratosis: A Clinical and Pathologic Reappraisal of 1040 Cases. The American Journal of Dermatopathology. oct 2005;27(5):387.</li>
+<li>Leachman SA, Kaspar RL, Fleckman P, Florell SR, Smith FJD, McLean WHI, et al. Clinical and Pathological Features of Pachyonychia Congenita. J Investig Dermatol Symp Proc. 1 oct 2005;10(1):3‑17.</li>
+<li>Hata T, Kavanaugh A. Rheumatoid arthritis in dermatology. Clinics in Dermatology. sept 2006;24(5):430‑7.</li>
+<li>Megahed M, Schaller J. [Histopathology of photodermatoses]. Hautarzt. d&eacute;c 2006;57(12):1083‑8.</li>
+<li>Smith JR, Lanier VB, Braziel RM, Falkenhagen KM, White C, Rosenbaum JT. Expression of vascular endothelial growth factor and its receptors in rosacea. Br J Ophthalmol. f&eacute;vr 2007;91(2):226‑9.</li>
+<li>Cowper SE, Rabach M, Girardi M. Clinical and histological findings in nephrogenic systemic fibrosis. Eur J Radiol. mai 2008;66(2):191‑9.</li>
+<li>Billet SE, Kortuem KR, Gibson LE, el-Azhary R. A Morbilliform Variant of Vancomycin-Induced Linear IgA Bullous Dermatosis. Archives of Dermatology. 1 juin 2008;144(6):774‑8.</li>
+<li>Quesada-Cort&eacute;s A, Campos-Mu&ntilde;oz L, D&iacute;az-D&iacute;az RM, Casado-Jim&eacute;nez M. Cold Panniculitis. Dermatologic Clinics. oct 2008;26(4):485‑9.</li>
+<li>Plaza JA, Prieto VG. Inflammatory Skin Conditions. In: Modern Surgical Pathology [Internet]. Elsevier; 2009 [cit&eacute; 16 mai 2023]. p. 1843‑89. Disponible sur: https://linkinghub.elsevier.com/retrieve/pii/B9781416039662000485</li>
+<li>Cavelier-Balloy B, Assouly P. Apport et limites de la biopsie cutan&eacute;e dans le diagnostic des alop&eacute;cies. Annales de Dermatologie et de V&eacute;n&eacute;r&eacute;ologie. f&eacute;vr 2009;136(2):182‑98.</li>
+<li>Brantley EI, Sheth P. Subcorneal pustular dermatosis in a patient with rheumatoid arthritis and diffuse scleroderma. Dermatology Online Journal [Internet]. 1 mars 2009 [cit&eacute; 18 mai 2023];15(3). Disponible sur: https://escholarship.org/uc/item/8qx0t9w5</li>
+<li>Alikhan A, Farshidi D, Shwayder T. Case of mistaken identity: Bullous congenital ichthyosiform erythroderma mistaken as epidermolysis bullosa simplex. Dermatology Online Journal [Internet]. 1 sept 2009 [cit&eacute; 16 mai 2023];15(9). Disponible sur: https://escholarship.org/uc/item/01h2c4k6</li>
+<li>In SI, Han JH, Kang HY, Lee ES, Kim YC. The Histopathological characteristics of livedo reticularis. Journal of Cutaneous Pathology. d&eacute;c 2009;36(12):1275‑8.</li>
+<li>Plantin P, et la Soci&eacute;t&eacute; fran&ccedil;aise de dermatop&eacute;diatrie. [Erythema toxicum neonatorum]. Ann Dermatol Venereol. f&eacute;vr 2010;137(2):150‑2.</li>
+<li>Fine JD. Inherited epidermolysis bullosa. Orphanet J Rare Dis. 28 mai 2010;5:12.</li>
+<li>Karaali Z, Baysal B, Poturoglu S, Kendir M. CUTANEOUS MANIFESTATIONS IN BRUCELLOSIS. Indian J Dermatol. 2011;56(3):339‑40.</li>
+<li>Kuznetsov A, Weisenseel P, Flaig M, Ruzicka T, Prinz J. Photoallergic Erythroderma due to Doxycycline Therapy of Erythema Chronicum Migrans. Acta Derm Venerol. 2011;91(6):734‑6.</li>
+<li>Menzinger S. Revue M&eacute;dicale Suisse : Dermite s&eacute;borrh&eacute;ique&nbsp;: manifestations cliniques et prise en charge. Revue M&eacute;dicale Suisse. 2011;7(289):752‑8.</li>
+<li>Requena L, Requena C, Christensen L, Zimmermann US, Kutzner H, Cerroni L. Adverse reactions to injectable soft tissue fillers. Journal of the American Academy of Dermatology. janv 2011;64(1):1‑34.</li>
+<li>Madke BS, Ghia D, Gadkari R, Nayak C. Cheilitis granulomatosa (Miescher granulomatous macrocheilitis) with trisomy 21. Dermatology Online Journal [Internet]. 1 juin 2012 [cit&eacute; 24 avr 2023];18(6). Disponible sur: https://escholarship.org/uc/item/3m34c0p4</li>
+<li>Morand JJ. Manifestations cutan&eacute;omuqueuses des mycoses profondes et/ou tropicales (hors candidoses). EMC - Dermatologie. sept 2012;7(3):1‑11.</li>
+<li>Alves J, Barreiros H, Matos D, Coelho R. Cutaneous thrombosis related to paroxysmal nocturnal hemoglobinuria: Clinical report. Dermatology Online Journal [Internet]. 1 nov 2012 [cit&eacute; 14 mai 2023];18(11). Disponible sur: https://escholarship.org/uc/item/1wv0j7zs</li>
+<li>Mundi JP, Marmon S, Fischer M, Kamino H, Patel R, Shapiro J. Dissecting cellulitis of the scalp. Dermatology Online Journal [Internet]. 1 d&eacute;c 2012 [cit&eacute; 18 avr 2023];18(12). Disponible sur: https://escholarship.org/uc/item/5v6848mq</li>
+<li>Cann JA, Jahrling PB, Hensley LE, Wahl-Jensen V. Comparative Pathology of Smallpox and Monkeypox in Man and Macaques. J Comp Pathol. janv 2013;148(1):6‑21.</li>
+<li>Theodoridis A, Makrantonaki E, Zouboulis CC. Malignant atrophic papulosis (K&ouml;hlmeier-Degos disease) - A review. Orphanet Journal of Rare Diseases. 14 janv 2013;8(1):10.</li>
+<li>de&nbsp;Boysson H, Geffray L. Granulomatose lymphomato&iuml;de. La Revue de M&eacute;decine Interne. juin 2013;34(6):349‑57.</li>
+<li>de&nbsp;Boysson H, Geffray L. Granulomatose lymphomato&iuml;de. La Revue de M&eacute;decine Interne. 1 juin 2013;34(6):349‑57.</li>
+<li>Nolan AL, Jen KY. Pathologic manifestations of levamisole-adulterated cocaine exposure. Diagn Pathol. 6 mai 2015;10:48.</li>
+<li>Dartevel A, Grenier F, Bouillet L, Mouthon L. Vascularites et vasculopathies induites par le levamisole&nbsp;: revue syst&eacute;matique de la litt&eacute;rature. La Revue de M&eacute;decine Interne. 1 d&eacute;c 2015;36:A48.</li>
+<li>Philandrianos C, Kerfant N, Jaloux C, Martinet L, Bertrand B, Casanova D. Les cicatrices ch&eacute;lo&iuml;des (premi&egrave;re partie) : une pathologie de la cicatrisation cutan&eacute;e. Annales de Chirurgie Plastique Esth&eacute;tique. avr 2016;61(2):128‑35.</li>
+<li>Philandrianos C, Kerfant N, Jaloux C, Martinet L, Bertrand B, Casanova D. Les cicatrices ch&eacute;lo&iuml;des (premi&egrave;re partie) : une pathologie de la cicatrisation cutan&eacute;e. Annales de Chirurgie Plastique Esth&eacute;tique. avr 2016;61(2):128‑35.</li>
+<li>Okhremchuk I, Abed S, Nguyen AT, Brandone N, Morand JJ. Milium collo&iuml;de&nbsp;: une observation associ&eacute;e &agrave; une trichinose. Annales de Pathologie. 1 avr 2016;36(2):130‑3.</li>
+<li>Rongioletti F, Merlo G, Carli C, Cribier B, Metze D, Calonje E, et al. Histopathologic characteristics of scleromyxedema: A&nbsp;study of a series of 34 cases. J Am Acad Dermatol. juin 2016;74(6):1194‑200.</li>
+<li>Themes UFO. Histopathology of Drug Reactions [Internet]. Basicmedical Key. 2016 [cit&eacute; 16 mars 2023]. Disponible sur: https://basicmedicalkey.com/histopathology-of-drug-reactions/</li>
+<li>Marques CC, Fernandes EL, Miquelin GM, Colferai MMT. Cutaneous manifestations of Churg-Strauss syndrome: key to diagnosis. An Bras Dermatol. 2017;92(5 Suppl 1):56‑8.</li>
+<li>Na K, Oh SH, Kim SK. Acne keloidalis nuchae in Asian: A single institutional experience. PLoS One. 2017;12(12):e0189790.</li>
+<li>Park JY, Park JH, Kim SJ, Kwon JE, Kang HY, Lee ES, et al. Two histopathological patterns of postinflammatory hyperpigmentation: epidermal and dermal. J Cutan Pathol. f&eacute;vr 2017;44(2):118‑24.</li>
+<li>Vildy S, Osmaeva K, Closs-Prophette F, Maillard H. N&eacute;croses cutan&eacute;es aux anti-vitamines K : un d&eacute;s&eacute;quilibre entre facteurs pro- et anticoagulants. La Revue de M&eacute;decine Interne. f&eacute;vr 2017;38(2):143‑6.</li>
+<li>Kugai T, Nakagawa H. Evolution of Purpura Fulminans. N Engl J Med. juin 2017;376(22):2182‑2182.</li>
+<li>Ye H, De S. Thermal injury of skin and subcutaneous tissues: A review of experimental approaches and numerical models. Burns. ao&ucirc;t 2017;43(5):909‑32.</li>
+<li>Jachiet M, Flageul B, Bouaziz JD, Bagot M, Terrier B. Les vascularites urticariennes hypocompl&eacute;ment&eacute;miques. La Revue de M&eacute;decine Interne. f&eacute;vr 2018;39(2):90‑8.</li>
+<li>Ortonne N. [Histopathology of cutaneous drug reactions]. Ann Pathol. f&eacute;vr 2018;38(1):7‑19.</li>
+<li>Leung N, Oliveira M, Selim MA, McKinley-Grant L, Lesesky E. Erythema dyschromicum perstans: A case report and systematic review of histologic presentation and treatment. Int J Womens Dermatol. 27 sept 2018;4(4):216‑22.</li>
+<li>David L, Andreani J, Secq V, La Scola B, Delaporte E, Berbis P, et al. Nodule d&rsquo;Orf&nbsp;: second g&eacute;nome viral d&eacute;crit et s&eacute;quenc&eacute; chez l&rsquo;homme. Annales de Dermatologie et de V&eacute;n&eacute;r&eacute;ologie. 1 d&eacute;c 2018;145(12, Supplement):S292.</li>
+<li>Khalil S, Ariel Gru A, Saavedra AP. Cutaneous extramedullary haematopoiesis: Implications in human disease and treatment. Experimental Dermatology. 2019;28(11):1201‑9.</li>
+<li>B&ouml;er-Auer A, Metze D. Histopathology of Hand-Foot-Mouth Disease in Adults and Criteria for Differentiation From Erythema Multiforme. Am J Dermatopathol. avr 2019;41(4):273‑80.</li>
+<li>Yadav AK. Histopathology and Molecular Pathology of Vitiligo [Internet]. Depigmentation. IntechOpen; 2019 [cit&eacute; 27 mars 2023]. Disponible sur: https://www.intechopen.com/chapters/69700</li>
+<li>Calonje E, Brenn T, Lazar AJ, MacKee PH, Billings SD, &eacute;diteurs. McKee&rsquo;s pathology of the skin: with clinical correlations. Fifth edition. Philadelphia, PA: Elsevier; 2020.</li>
+<li>Kumari I, Dongre A, Mohanty S. Rheumatoid Neutrophilic Dermatosis: The Distinct Entity with Florid Presentation. Indian Dermatology Online Journal. f&eacute;vr 2020;11(1):114.</li>
+<li>George EA, Kornik R, Robinson-Bostom L. Providencia stuartii septic vasculitis. JAAD Case Rep. 30 avr 2020;6(5):422‑5.</li>
+<li>Stien S, Durot E, Durlach A, Beylot-Barry M, Adamski H, Beltraminelli H, et al. Cutaneous Involvement in Waldenstr&ouml;m&rsquo;s Macroglobulinaemia. Acta Derm Venereol. 17 ao&ucirc;t 2020;100(15):adv00225.</li>
+<li>Tseng HW, Liao JB, Wei YA. Adult-onset inflammatory linear verrucous epidermal nevus: Immunohistochemical studies and review of the literature. Journal of Cutaneous Pathology. 2021;48(1):140‑6.</li>
+<li>Martins AM, Marto JM, Johnson JL, Graber EM. A Review of Systemic Minocycline Side Effects and Topical Minocycline as a Safer Alternative for Treating Acne and Rosacea. Antibiotics (Basel). 22 juin 2021;10(7):757.</li>
+<li>Bertoli M. Autoeczematization: A Strange Id Reaction of the Skin. Cutis [Internet]. 1 sept 2021 [cit&eacute; 12 mars 2023];108(3). Disponible sur: https://www.mdedge.com/dermatology/article/245813/contact-dermatitis/autoeczematization-strange-id-reaction-skin</li>
+<li>Brazel M, Desai A, Are A, Motaparthi K. Staphylococcal Scalded Skin Syndrome and Bullous Impetigo. Medicina (Kaunas). 24 oct 2021;57(11):1157.</li>
+<li>Mondor Disease: Background, Pathophysiology, Epidemiology. 8 nov 2021 [cit&eacute; 8 mai 2023]; Disponible sur: https://emedicine.medscape.com/article/1087099-overview</li>
+<li>Robinson CA, Love LW, Farci F. Nummular Dermatitis. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022 [cit&eacute; 18 mars 2023]. Disponible sur: http://www.ncbi.nlm.nih.gov/books/NBK565878/</li>
+<li>Ernst M, Giubellino A. Histopathologic Features of Maculopapular Drug Eruption. Dermatopathology. juin 2022;9(2):111‑21.</li>
+<li>Khandpur S, Ahuja R. Drug-Induced vs. Viral Maculopapular Exanthem&mdash;Resolving the Dilemma. Dermatopathology. juin 2022;9(2):164‑71.</li>
+<li>J Fromm L. Pitted Keratolysis: Background, Pathophysiology, Epidemiology. 12 oct 2022 [cit&eacute; 19 mars 2023]; Disponible sur: https://emedicine.medscape.com/article/1053078-overview</li>
+<li>Petiot A, Desbois N, Soussain-Pinard C, Amazan E, Messagier AL. Un cas de prototh&eacute;cose en Martinique. Annales de Dermatologie et de V&eacute;n&eacute;r&eacute;ologie - FMC. 1 nov 2022;2(8, Supplement 1):A233‑4.</li>
+<li>Jinna S, Khoury J. Migratory Thrombophlebitis. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2023 [cit&eacute; 1 mai 2023]. Disponible sur: http://www.ncbi.nlm.nih.gov/books/NBK547702/</li>
+<li>Sizar O, Talati R. Berylliosis. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2023 [cit&eacute; 24 avr 2023]. Disponible sur: http://www.ncbi.nlm.nih.gov/books/NBK470364/</li>
+<li>Stanley M, Killeen RB, Michalski JM. Thrombotic Thrombocytopenic Purpura. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2023 [cit&eacute; 8 mai 2023]. Disponible sur: http://www.ncbi.nlm.nih.gov/books/NBK430721/">http://www.ncbi.nlm.nih.gov/books/NBK430721/</li>
+</ol>
+	</ul>
+
+</body>
+</html>
+
+
+
