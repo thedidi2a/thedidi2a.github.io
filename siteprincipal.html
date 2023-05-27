@@ -27,7 +27,26 @@
     });
   });
   </script>
+		
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var images = document.querySelectorAll('img');
+  images.forEach(function(image) {
+    image.setAttribute('loading', 'lazy');
+  });
 
+  var videos = document.querySelectorAll('video');
+  videos.forEach(function(video) {
+    video.setAttribute('loading', 'lazy');
+  });
+
+  var iframes = document.querySelectorAll('iframe');
+  iframes.forEach(function(iframe) {
+    iframe.setAttribute('loading', 'lazy');
+  });
+});
+</script>
+		
 </head> 
 
 <body> 
