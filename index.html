@@ -157,32 +157,62 @@
                 <i class="fas fa-times"></i>
             </a>
             <div class="tm-testimonials-inner">
+		    <div>
+    <button onclick="zoomIn()">Zoom +</button>
+    <button onclick="zoomOut()">Zoom -</button>
+  </div>
+  <div id="pdfContainer"></div>
 		  <div id="pdfContainer"></div>
 
   <script>
     const pdfPath = "Dermatopathologie inflammatoire(4).pdf";
-    const loadingTask = pdfjsLib.getDocument(pdfPath);
+     const loadingTask = pdfjsLib.getDocument(pdfPath);
+  let scale = 1; // Échelle de zoom actuelle
+
+  const zoomIn = function() {
+    scale += 0.1; // Augmenter l'échelle de zoom
+    renderPage();
+  };
+
+  const zoomOut = function() {
+    if (scale > 0.1) {
+      scale -= 0.1; // Réduire l'échelle de zoom
+      renderPage();
+    }
+  };
+
+  const renderPage = function() {
     loadingTask.promise.then(function(pdf) {
       pdf.getPage(1).then(function(page) {
-        const scale = 1.5;
-        const viewport = page.getViewport({ scale: scale });
+        const container = document.getElementById("pdfContainer");
+        const containerWidth = container.offsetWidth;
+        const viewport = page.getViewport({ scale: 1 });
+        const desiredScale = containerWidth / viewport.width;
+
+        scale = desiredScale; // Mettre à jour l'échelle de zoom
+        const newViewport = page.getViewport({ scale: scale });
 
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+        canvas.height = newViewport.height;
+        canvas.width = newViewport.width;
 
         const renderContext = {
           canvasContext: context,
-          viewport: viewport
+          viewport: newViewport
         };
 
         page.render(renderContext).promise.then(function() {
+          document.getElementById("pdfContainer").innerHTML = "";
           document.getElementById("pdfContainer").appendChild(canvas);
         });
       });
     });
-  </script>    
+  };
+
+  renderPage();
+  window.addEventListener("resize", renderPage); // Appeler renderPage lors du redimensionnement de la fenêtre
+</script>
 		    
 		    
             </div>            
