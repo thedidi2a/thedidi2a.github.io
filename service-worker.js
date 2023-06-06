@@ -2,6 +2,9 @@ var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
   '/index.html',
+  '/siteprincipal.html',
+  '/ongletrecherche.html',
+  '/références.html ',
   '/styles/main.css',
   '/script/main.js',
   "https://thedidi2a.github.io"
